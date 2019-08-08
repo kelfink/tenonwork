@@ -1,0 +1,1830 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--[if gt IE 9]><!-->
+<script>//common/scripts.isml</script>
+<script defer type="text/javascript" src="/on/demandware.static/Sites-RefArch-Site/-/en_US/v1559779090244/js/main.js"></script>
+
+    <script defer type="text/javascript" src="/on/demandware.static/Sites-RefArch-Site/-/en_US/v1559779090244/js/productTile.js"></script>
+
+
+<!--<![endif]-->
+<!-- dwMarker="linclude" dwTemplateTitle="/default//common/htmlHead.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default//common/htmlHead.isml" -->
+<meta charset=UTF-8>
+
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+	<title> The website with best products at low prices. | RefArch | Salesforce Commerce Cloud | 4.0.0</title>
+
+
+<meta name="description" content="Commerce Cloud Storefront Reference Architecture"/>
+<meta name="keywords" content="Commerce Cloud Storefront Reference Architecture"/>
+
+
+
+    
+        <meta name="robots" content="index,follow">
+    
+
+    
+        <meta property="og:url" content="https://demo-na01-nebraskafurnituremart.demandware.net/s/RefArch/home?lang=en_US">
+    
+
+
+<link rel="icon" type="image/png" href="/on/demandware.static/Sites-RefArch-Site/-/default/dwd56cd154/images/favicons/favicon-196x196.png" sizes="196x196" />
+<link rel="icon" type="image/png" href="/on/demandware.static/Sites-RefArch-Site/-/default/dwb84b898d/images/favicons/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/png" href="/on/demandware.static/Sites-RefArch-Site/-/default/dw7f6ed865/images/favicons/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="/on/demandware.static/Sites-RefArch-Site/-/default/dw322936ef/images/favicons/favicon-16x16.png" sizes="16x16" />
+<link rel="icon" type="image/png" href="/on/demandware.static/Sites-RefArch-Site/-/default/dwe697068c/images/favicons/favicon-128.png" sizes="128x128" />
+
+<link rel="stylesheet" href="/on/demandware.static/Sites-RefArch-Site/-/en_US/v1559779090244/css/global.css" />
+
+    <link rel="stylesheet" href="/on/demandware.static/Sites-RefArch-Site/-/en_US/v1559779090244/css/homePage.css" />
+
+
+
+
+
+
+
+
+<script type="text/javascript">//<!--
+/* <![CDATA[ (head-active_data.js) */
+var dw = (window.dw || {});
+dw.ac = {
+    _analytics: null,
+    _events: [],
+    _category: "",
+    _capture: function(configs) {
+        if (Object.prototype.toString.call(configs) === "[object Array]") {
+            configs.forEach(captureObject);
+            return;
+        }
+        dw.ac._events.push(configs);
+    },
+	capture: function() { 
+		dw.ac._capture(arguments);
+		// send to CQ as well:
+		if (window.CQuotient) {
+			window.CQuotient.trackEventsFromAC(arguments);
+		}
+	},
+    EV_PRD_SEARCHHIT: "searchhit",
+    EV_PRD_DETAIL: "detail",
+    EV_PRD_RECOMMENDATION: "recommendation",
+    EV_PRD_SETPRODUCT: "setproduct",
+    applyContext: function(context) {
+        if (typeof context === "object" && context.hasOwnProperty("category")) {
+        	dw.ac._category = context.category;
+        }
+    },
+    setDWAnalytics: function(analytics) {
+        dw.ac._analytics = analytics;
+    }
+};
+/* ]]> */
+// -->
+</script><script type="text/javascript">//<!--
+/* <![CDATA[ (head-cquotient.js) */
+var CQuotient = window.CQuotient = {};
+CQuotient.clientId = 'bdfm-RefArch';
+CQuotient.realm = 'BDFM';
+CQuotient.siteId = 'RefArch';
+CQuotient.instanceType = 'sbx';
+CQuotient.activities = [];
+CQuotient.cqcid='';
+CQuotient.cquid='';
+CQuotient.initFromCookies = function () {
+	var ca = document.cookie.split(';');
+	for(var i=0;i < ca.length;i++) {
+	  var c = ca[i];
+	  while (c.charAt(0)==' ') c = c.substring(1,c.length);
+	  if (c.indexOf('cqcid=') == 0) {
+		  CQuotient.cqcid=c.substring('cqcid='.length,c.length);
+	  } else if (c.indexOf('cquid=') == 0) {
+		  CQuotient.cquid=c.substring('cquid='.length,c.length);
+		  break;
+	  }
+	}
+}
+CQuotient.getCQCookieId = function () {
+	if(window.CQuotient.cqcid == '')
+		window.CQuotient.initFromCookies();
+	return window.CQuotient.cqcid;
+};
+CQuotient.getCQUserId = function () {
+	if(window.CQuotient.cquid == '')
+		window.CQuotient.initFromCookies();
+	return window.CQuotient.cquid;
+};
+CQuotient.trackEventsFromAC = function (/* Object or Array */ events) {
+try {
+	if (Object.prototype.toString.call(events) === "[object Array]") {
+		events.forEach(_trackASingleCQEvent);
+	} else {
+		CQuotient._trackASingleCQEvent(events);
+	}
+} catch(err) {}
+};
+CQuotient._trackASingleCQEvent = function ( /* Object */ event) {
+	if (event && event.id) {
+		if (event.type === dw.ac.EV_PRD_DETAIL) {
+			CQuotient.trackViewProduct( {id:'', alt_id: event.id, type: 'raw_sku'} );
+		} // not handling the other dw.ac.* events currently
+	}
+};
+CQuotient.trackViewProduct = function(/* Object */ cqParamData){
+	var cq_params = {};
+	cq_params.cookieId = CQuotient.getCQCookieId();
+	cq_params.userId = CQuotient.getCQUserId();
+	cq_params.product = cqParamData.product;
+	cq_params.realm = cqParamData.realm;
+	cq_params.siteId = cqParamData.siteId;
+	cq_params.instanceType = cqParamData.instanceType;
+	
+	if(CQuotient.sendActivity) {
+		CQuotient.sendActivity(CQuotient.clientId, 'viewProduct', cq_params);
+	} else {
+		CQuotient.activities.push({activityType: 'viewProduct', parameters: cq_params});
+	}
+};
+/* ]]> */
+// -->
+</script>
+
+<!-- dwMarker="linclude" dwTemplateTitle="/default//components/schema.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default//components/schema.isml" -->
+
+
+<meta name="rqid" content="RRRRRRRRRRRRRRRR"/><link type="text/css" href="/on/demandware.static/Sites-Site/-/-/internal/css/dwux-sf-15.5.css?v=19.8.2.187" rel="stylesheet" /></head>
+<body><iframe src="/on/demandware.store/Sites-RefArch-Site/en_US/__SYSTEM__StorefrontToolkit-Start" width="0px" height="0px" id="DW-SFToolkit"></iframe>
+<span id="DW-SFToolkit-config" data-data="{&quot;baseURL&quot;:&quot;/on/demandware.static/Sites-Site/-/-/internal/&quot;,&quot;editURL&quot;:&quot;https://demo-na01-nebraskafurnituremart.demandware.net/on/demandware.store/Sites-Site/-/&quot;,&quot;site&quot;:&quot;RefArch&quot;,&quot;cp&quot;:{&quot;serverDateTimePattern&quot;:&quot;yyyyMMddHHmm&quot;,&quot;datePattern&quot;:&quot;MM/dd/yyyy&quot;,&quot;timePattern&quot;:&quot;h:mm a&quot;}}" ></span>
+<script type="application/javascript" src="/on/demandware.static/Sites-Site/-/-/internal/jscript/dwux-init.js?v=19.8.2.187"></script>
+<div class="page" data-action="Home-Show" data-querystring="lang=en_US" >
+<!-- dwMarker="linclude" dwTemplateTitle="/default//components/header/pageHeader.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default//components/header/pageHeader.isml" -->
+<header>
+    <!-- dwMarker="linclude" dwTemplateTitle="/default//components/header/skipNav.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default//components/header/skipNav.isml" -->
+<a href="#maincontent" class="skip" aria-label="Skip to main content">Skip to main content</a>
+<a href="#footercontent" class="skip" aria-label="Skip to footer content">Skip to footer content</a>
+    <div class="header-banner slide-up d-none">
+        <div class="container">
+            <div class="d-flex justify-content-between">
+                <div></div>
+                <div class="content">
+                    <!-- dwMarker="slot" dwContentID="header-banner-m" dwContext="global"-->
+	 
+
+
+	<!-- dwMarker="linclude" dwTemplateTitle="/default/slots/htmlSlotContainer.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/slots/htmlSlotContainer.isml" -->
+<!-- dwMarker="dw-object-rinclude" data="{&quot;TemplateURL&quot;:&quot;http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/slots/content/htmlSlotContainer.isml&quot;,&quot;IsController&quot;:false,&quot;PageProcessingTime&quot;:2,&quot;TemplateTitle&quot;:&quot;/default/slots/content/htmlSlotContainer.isml (app_storefront_base)&quot;,&quot;PipelineTitle&quot;:&quot;Internal&quot;}" --><!-- dwMarker="rinclude" dwPipelineTitle="Internal" dwIsController="false" dwTemplateTitle="/default/slots/content/htmlSlotContainer.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/slots/content/htmlSlotContainer.isml" --><div class="html-slot-container">
+	
+		
+			<div class="header-promotion"><strong>FREE 2-Day SHIPPING</strong> FOR ORDERS OVER $300</div>
+		
+	
+</div>
+ 
+	
+                </div>
+                <div class="close-button">
+                    <button type="button" class="close" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav role="navigation">
+        <div class="header container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="navbar-header brand">
+                        <a class="logo-home" href="/s/RefArch/home?lang=en_US" title="Commerce Cloud Storefront Reference Architecture Home">
+                            <img class="hidden-md-down" src="/on/demandware.static/Sites-RefArch-Site/-/default/dwffcb20e6/images/logo.svg" alt="Commerce Cloud Storefront Reference Architecture" />
+                            <img class="d-lg-none" src="/on/demandware.static/Sites-RefArch-Site/-/default/dwb4ba2b09/images/logo-small.svg" alt="Commerce Cloud Storefront Reference Architecture" />
+                        </a>
+                    </div>
+                    <div class="navbar-header">
+                        <div class="pull-left">
+                            <div class="hidden-md-down">
+                                
+    <!-- dwMarker="dw-object-rinclude" data="{&quot;TemplateURL&quot;:&quot;http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/account/header.isml&quot;,&quot;IsController&quot;:true,&quot;PipelineURL&quot;:&quot;http://localhost:60606/target=/app_storefront_base/cartridge/controllers/Account.js&amp;start=Header&quot;,&quot;PageProcessingTime&quot;:5,&quot;TemplateTitle&quot;:&quot;/default/account/header.isml (app_storefront_base)&quot;,&quot;PipelineTitle&quot;:&quot;Account-Header (app_storefront_base)&quot;}" --><!-- dwMarker="rinclude" dwPipelineTitle="Account-Header (app_storefront_base)" dwPipelineURL="http://localhost:60606/target=/app_storefront_base/cartridge/controllers/Account.js&amp;start=Header" dwIsController="true" dwTemplateTitle="/default/account/header.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/account/header.isml" --><div class="user hidden-md-down">
+        <a href="https://demo-na01-nebraskafurnituremart.demandware.net/on/demandware.store/Sites-RefArch-Site/en_US/Login-Show" role="button" aria-label="Login to your account"><!-- dwMarker="link" dwPipelineTitle="Login-Show (app_storefront_base)" dwIsController="true" dwPipelineURL="http://localhost:60606/target=/app_storefront_base/cartridge/controllers/Login.js&amp;start=Show" -->
+            <i class="fa fa-sign-in" aria-hidden="true"></i>
+            <span class="user-message">Login</span>
+        </a>
+    </div>
+
+
+                                
+
+                            </div>
+                            <button class="navbar-toggler d-md-none" type="button" aria-controls="sg-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                                &#9776; <span class="hidden-xs-down">Menu</span>
+                            </button>
+                        </div>
+                        <div class="pull-right">
+                            <div class="search hidden-xs-down">
+                                <!-- dwMarker="linclude" dwTemplateTitle="/default/components/header/search.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/components/header/search.isml" -->
+<div class="site-search">
+	<form role="search"
+          action="/s/RefArch/search?lang=en_US"
+          method="get"
+          name="simpleSearch">
+        <input class="form-control search-field"
+               type="search"
+               name="q"
+               value=""
+               placeholder="Search (keywords,etc)"
+               role="combobox"
+               aria-describedby="search-assistive-text"
+               aria-haspopup="listbox"
+               aria-owns="search-results"
+               aria-expanded="false"
+               aria-autocomplete="list"
+               aria-activedescendant=""
+               aria-controls="search-results"
+               aria-label="Enter Keyword or Item No." />
+        <button type="reset" name="reset-button" class="fa fa-times reset-button d-none" aria-label="Clear search keywords"></button>
+        <button type="submit" name="search-button" class="fa fa-search" aria-label="Submit search keywords"></button>
+        <div class="suggestions-wrapper" data-url="/on/demandware.store/Sites-RefArch-Site/en_US/SearchServices-GetSuggestions?q="></div>
+        <input type="hidden" value="en_US" name="lang">
+	</form>
+</div>
+
+                            </div>
+                            <div class="minicart" data-action-url="/on/demandware.store/Sites-RefArch-Site/en_US/Cart-MiniCartShow">
+                                <!-- dwMarker="dw-object-rinclude" data="{&quot;TemplateURL&quot;:&quot;http://localhost:60606/target=/app_storefront_base/cartridge/templates/default//components/header/miniCart.isml&quot;,&quot;IsController&quot;:true,&quot;PipelineURL&quot;:&quot;http://localhost:60606/target=/app_storefront_base/cartridge/controllers/Cart.js&amp;start=MiniCart&quot;,&quot;PageProcessingTime&quot;:5,&quot;TemplateTitle&quot;:&quot;/default//components/header/miniCart.isml (app_storefront_base)&quot;,&quot;PipelineTitle&quot;:&quot;Cart-MiniCart (app_storefront_base)&quot;}" --><!-- dwMarker="rinclude" dwPipelineTitle="Cart-MiniCart (app_storefront_base)" dwPipelineURL="http://localhost:60606/target=/app_storefront_base/cartridge/controllers/Cart.js&amp;start=MiniCart" dwIsController="true" dwTemplateTitle="/default//components/header/miniCart.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default//components/header/miniCart.isml" --><div class="minicart-total hide-link-med">
+    <a class="minicart-link" href="https://demo-na01-nebraskafurnituremart.demandware.net/s/RefArch/cart?lang=en_US" title="Cart 0 Items" aria-label="Cart 0 Items" aria-haspopup="true">
+        <i class="minicart-icon fa fa-shopping-bag"></i>
+        <span class="minicart-quantity">
+            0
+        </span>
+    </a>
+</div>
+
+<div class="minicart-total hide-no-link">
+    <i class="minicart-icon fa fa-shopping-bag"></i>
+        <span class="minicart-quantity">
+            0
+        </span>
+</div>
+<div class="popover popover-bottom"></div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-menu navbar-toggleable-sm menu-toggleable-left multilevel-dropdown d-none d-md-block" id="sg-navbar-collapse">
+            <div class="container">
+                <div class="row">
+                    <!-- dwMarker="dw-object-rinclude" data="{&quot;TemplateURL&quot;:&quot;http://localhost:60606/target=/app_storefront_base/cartridge/templates/default//components/header/menu.isml&quot;,&quot;IsController&quot;:true,&quot;PipelineURL&quot;:&quot;http://localhost:60606/target=/app_storefront_base/cartridge/controllers/Page.js&amp;start=IncludeHeaderMenu&quot;,&quot;PageProcessingTime&quot;:23,&quot;PageCacheExpires&quot;:&quot;08/09/2019 6:04 pm&quot;,&quot;TemplateTitle&quot;:&quot;/default//components/header/menu.isml (app_storefront_base)&quot;,&quot;PipelineTitle&quot;:&quot;Page-IncludeHeaderMenu (app_storefront_base)&quot;}" --><!-- dwMarker="rinclude" dwPipelineTitle="Page-IncludeHeaderMenu (app_storefront_base)" dwPipelineURL="http://localhost:60606/target=/app_storefront_base/cartridge/controllers/Page.js&amp;start=IncludeHeaderMenu" dwIsController="true" dwTemplateTitle="/default//components/header/menu.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default//components/header/menu.isml" --><nav class="navbar navbar-expand-md bg-inverse col-12">
+    <div class="close-menu clearfix d-lg-none">
+        <div class="back pull-left">
+            <button role="button" aria-label="Back to previous menu">
+                <span class="caret-left"></span>
+                Back
+            </button>
+        </div>
+        <div class="close-button pull-right">
+            <button role="button" aria-label="Close Menu">
+                Close
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    </div>
+    <div class="menu-group" role="navigation">
+        <ul class="nav navbar-nav" role="menu">
+            
+                
+                    
+                        <li class="nav-item dropdown" role="presentation">
+                            <a href="/s/RefArch/new%20arrivals/?lang=en_US" id="newarrivals" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="0">New Arrivals</a>
+                            
+                            <!-- dwMarker="linclude" dwTemplateTitle="/default/components/header/menuItem.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/components/header/menuItem.isml" -->
+<ul class="dropdown-menu" role="menu" aria-hidden="true" aria-label="newarrivals">
+    
+        
+            <li class="dropdown-item" role="presentation">
+                <a href="/s/RefArch/new%20arrivals/womens/?lang=en_US" id="newarrivals-womens" role="menuitem" class="dropdown-link" tabindex="-1">Womens</a>
+            </li>
+        
+    
+        
+            <li class="dropdown-item" role="presentation">
+                <a href="/s/RefArch/new%20arrivals/mens/?lang=en_US" id="newarrivals-mens" role="menuitem" class="dropdown-link" tabindex="-1">Mens</a>
+            </li>
+        
+    
+        
+            <li class="dropdown-item" role="presentation">
+                <a href="/s/RefArch/new%20arrivals/electronics/?lang=en_US" id="newarrivals-electronics" role="menuitem" class="dropdown-link" tabindex="-1">Electronics</a>
+            </li>
+        
+    
+</ul>
+
+                        </li>
+                    
+                
+                    
+                        <li class="nav-item dropdown" role="presentation">
+                            <a href="/s/RefArch/womens/?lang=en_US" id="womens" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="0">Womens</a>
+                            
+                            <!-- dwMarker="linclude" dwTemplateTitle="/default/components/header/menuItem.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/components/header/menuItem.isml" -->
+<ul class="dropdown-menu" role="menu" aria-hidden="true" aria-label="womens">
+    
+        
+            <li class="dropdown-item dropdown" role="presentation">
+                <a href="/s/RefArch/womens/clothing/?lang=en_US" id="womens-clothing" class="dropdown-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="0">Clothing</a>
+                
+                <!-- dwMarker="linclude" dwTemplateTitle="/default/components/header/menuItem.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/components/header/menuItem.isml" -->
+<ul class="dropdown-menu" role="menu" aria-hidden="true" aria-label="womens-clothing">
+    
+        
+            <li class="dropdown-item" role="presentation">
+                <a href="/s/RefArch/womens/clothing/outfits/?lang=en_US" id="womens-outfits" role="menuitem" class="dropdown-link" tabindex="-1">Outfits</a>
+            </li>
+        
+    
+        
+            <li class="dropdown-item" role="presentation">
+                <a href="/s/RefArch/womens/clothing/tops/?lang=en_US" id="womens-clothing-tops" role="menuitem" class="dropdown-link" tabindex="-1">Tops</a>
+            </li>
+        
+    
+        
+            <li class="dropdown-item" role="presentation">
+                <a href="/s/RefArch/womens/clothing/dresses/?lang=en_US" id="womens-clothing-dresses" role="menuitem" class="dropdown-link" tabindex="-1">Dresses</a>
+            </li>
+        
+    
+        
+            <li class="dropdown-item" role="presentation">
+                <a href="/s/RefArch/womens/clothing/bottoms/?lang=en_US" id="womens-clothing-bottoms" role="menuitem" class="dropdown-link" tabindex="-1">Bottoms</a>
+            </li>
+        
+    
+        
+            <li class="dropdown-item" role="presentation">
+                <a href="/s/RefArch/womens/clothing/jackets%20%26%20coats/?lang=en_US" id="womens-clothing-jackets" role="menuitem" class="dropdown-link" tabindex="-1">Jackets &amp; Coats</a>
+            </li>
+        
+    
+        
+            <li class="dropdown-item" role="presentation">
+                <a href="/s/RefArch/womens/clothing/feeling%20red/?lang=en_US" id="womens-clothing-feeling-red" role="menuitem" class="dropdown-link" tabindex="-1">Feeling Red</a>
+            </li>
+        
+    
+</ul>
+
+            </li>
+        
+    
+        
+            <li class="dropdown-item dropdown" role="presentation">
+                <a href="/s/RefArch/womens/jewelry/?lang=en_US" id="womens-jewelry" class="dropdown-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="0">Jewelry</a>
+                
+                <!-- dwMarker="linclude" dwTemplateTitle="/default/components/header/menuItem.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/components/header/menuItem.isml" -->
+<ul class="dropdown-menu" role="menu" aria-hidden="true" aria-label="womens-jewelry">
+    
+        
+            <li class="dropdown-item" role="presentation">
+                <a href="/s/RefArch/womens/jewelry/earrings/?lang=en_US" id="womens-jewelry-earrings" role="menuitem" class="dropdown-link" tabindex="-1">Earrings</a>
+            </li>
+        
+    
+        
+            <li class="dropdown-item" role="presentation">
+                <a href="/s/RefArch/womens/jewelry/bracelets/?lang=en_US" id="womens-jewelry-bracelets" role="menuitem" class="dropdown-link" tabindex="-1">Bracelets</a>
+            </li>
+        
+    
+        
+            <li class="dropdown-item" role="presentation">
+                <a href="/s/RefArch/womens/jewelry/necklaces/?lang=en_US" id="womens-jewelry-necklaces" role="menuitem" class="dropdown-link" tabindex="-1">Necklaces</a>
+            </li>
+        
+    
+</ul>
+
+            </li>
+        
+    
+        
+            <li class="dropdown-item dropdown" role="presentation">
+                <a href="/s/RefArch/womens/accessories/?lang=en_US" id="womens-accessories" class="dropdown-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="0">Accessories</a>
+                
+                <!-- dwMarker="linclude" dwTemplateTitle="/default/components/header/menuItem.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/components/header/menuItem.isml" -->
+<ul class="dropdown-menu" role="menu" aria-hidden="true" aria-label="womens-accessories">
+    
+        
+            <li class="dropdown-item" role="presentation">
+                <a href="/s/RefArch/womens/accessories/scarves/?lang=en_US" id="womens-accessories-scarves" role="menuitem" class="dropdown-link" tabindex="-1">Scarves</a>
+            </li>
+        
+    
+        
+            <li class="dropdown-item" role="presentation">
+                <a href="/s/RefArch/womens/accessories/shoes/?lang=en_US" id="womens-accessories-shoes" role="menuitem" class="dropdown-link" tabindex="-1">Shoes</a>
+            </li>
+        
+    
+</ul>
+
+            </li>
+        
+    
+</ul>
+
+                        </li>
+                    
+                
+                    
+                        <li class="nav-item dropdown" role="presentation">
+                            <a href="/s/RefArch/mens/?lang=en_US" id="mens" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="0">Mens</a>
+                            
+                            <!-- dwMarker="linclude" dwTemplateTitle="/default/components/header/menuItem.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/components/header/menuItem.isml" -->
+<ul class="dropdown-menu" role="menu" aria-hidden="true" aria-label="mens">
+    
+        
+            <li class="dropdown-item dropdown" role="presentation">
+                <a href="/s/RefArch/mens/clothing/?lang=en_US" id="mens-clothing" class="dropdown-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="0">Clothing</a>
+                
+                <!-- dwMarker="linclude" dwTemplateTitle="/default/components/header/menuItem.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/components/header/menuItem.isml" -->
+<ul class="dropdown-menu" role="menu" aria-hidden="true" aria-label="mens-clothing">
+    
+        
+            <li class="dropdown-item" role="presentation">
+                <a href="/s/RefArch/mens/clothing/suits/?lang=en_US" id="mens-clothing-suits" role="menuitem" class="dropdown-link" tabindex="-1">Suits</a>
+            </li>
+        
+    
+        
+            <li class="dropdown-item" role="presentation">
+                <a href="/s/RefArch/mens/clothing/jackets%20%26%20coats/?lang=en_US" id="mens-clothing-jackets" role="menuitem" class="dropdown-link" tabindex="-1">Jackets &amp; Coats</a>
+            </li>
+        
+    
+        
+            <li class="dropdown-item" role="presentation">
+                <a href="/s/RefArch/mens/clothing/dress%20shirts/?lang=en_US" id="mens-clothing-dress-shirts" role="menuitem" class="dropdown-link" tabindex="-1">Dress Shirts</a>
+            </li>
+        
+    
+        
+            <li class="dropdown-item" role="presentation">
+                <a href="/s/RefArch/mens/clothing/shorts/?lang=en_US" id="mens-clothing-shorts" role="menuitem" class="dropdown-link" tabindex="-1">Shorts</a>
+            </li>
+        
+    
+        
+            <li class="dropdown-item" role="presentation">
+                <a href="/s/RefArch/mens/clothing/pants/?lang=en_US" id="mens-clothing-pants" role="menuitem" class="dropdown-link" tabindex="-1">Pants</a>
+            </li>
+        
+    
+</ul>
+
+            </li>
+        
+    
+        
+            <li class="dropdown-item dropdown" role="presentation">
+                <a href="/s/RefArch/mens/accessories/?lang=en_US" id="mens-accessories" class="dropdown-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="0">Accessories</a>
+                
+                <!-- dwMarker="linclude" dwTemplateTitle="/default/components/header/menuItem.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/components/header/menuItem.isml" -->
+<ul class="dropdown-menu" role="menu" aria-hidden="true" aria-label="mens-accessories">
+    
+        
+            <li class="dropdown-item" role="presentation">
+                <a href="/s/RefArch/mens/accessories/ties/?lang=en_US" id="mens-accessories-ties" role="menuitem" class="dropdown-link" tabindex="-1">Ties</a>
+            </li>
+        
+    
+        
+            <li class="dropdown-item" role="presentation">
+                <a href="/s/RefArch/mens/accessories/gloves/?lang=en_US" id="mens-accessories-gloves" role="menuitem" class="dropdown-link" tabindex="-1">Gloves</a>
+            </li>
+        
+    
+        
+            <li class="dropdown-item" role="presentation">
+                <a href="/s/RefArch/mens/accessories/luggage/?lang=en_US" id="mens-accessories-luggage" role="menuitem" class="dropdown-link" tabindex="-1">Luggage</a>
+            </li>
+        
+    
+</ul>
+
+            </li>
+        
+    
+</ul>
+
+                        </li>
+                    
+                
+                    
+                        <li class="nav-item dropdown" role="presentation">
+                            <a href="/s/RefArch/electronics-2/?lang=en_US" id="electronics-sfra" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="0">Electronics</a>
+                            
+                            <!-- dwMarker="linclude" dwTemplateTitle="/default/components/header/menuItem.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/components/header/menuItem.isml" -->
+<ul class="dropdown-menu" role="menu" aria-hidden="true" aria-label="electronics-sfra">
+    
+        
+            <li class="dropdown-item" role="presentation">
+                <a href="/s/RefArch/electronics/televisions/?lang=en_US" id="electronics-televisions-sfra" role="menuitem" class="dropdown-link" tabindex="-1">Televisions</a>
+            </li>
+        
+    
+        
+            <li class="dropdown-item" role="presentation">
+                <a href="/s/RefArch/electronics/digital%20cameras/?lang=en_US" id="electronics-digital-cameras-sfra" role="menuitem" class="dropdown-link" tabindex="-1">Digital Cameras</a>
+            </li>
+        
+    
+        
+            <li class="dropdown-item" role="presentation">
+                <a href="/s/RefArch/electronics/ipod%20%26%20mp3%20players/?lang=en_US" id="electronics-digital-media-players-sfra" role="menuitem" class="dropdown-link" tabindex="-1">iPod &amp; MP3 Players</a>
+            </li>
+        
+    
+        
+            <li class="dropdown-item" role="presentation">
+                <a href="/s/RefArch/electronics/gps%20navigation/?lang=en_US" id="electronics-gps-units-sfra" role="menuitem" class="dropdown-link" tabindex="-1">GPS Navigation</a>
+            </li>
+        
+    
+        
+            <li class="dropdown-item" role="presentation">
+                <a href="/s/RefArch/electronics/gaming/?lang=en_US" id="electronics-gaming-sfra" role="menuitem" class="dropdown-link" tabindex="-1">Gaming</a>
+            </li>
+        
+    
+</ul>
+
+                        </li>
+                    
+                
+                    
+                        <li class="nav-item" role="presentation">
+                            <a href="https://demo-na01-nebraskafurnituremart.demandware.net/s/RefArch/search?cgid=root&amp;amp;srule=top-sellers&amp;amp;lang=en_US" id="top-seller" class="nav-link" role="link" tabindex="0">Top Sellers</a>
+                        </li>
+                    
+                
+            
+            
+    <!-- dwMarker="dw-object-rinclude" data="{&quot;TemplateURL&quot;:&quot;http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/account/mobileHeader.isml&quot;,&quot;IsController&quot;:true,&quot;PipelineURL&quot;:&quot;http://localhost:60606/target=/app_storefront_base/cartridge/controllers/Account.js&amp;start=Header&quot;,&quot;PageProcessingTime&quot;:5,&quot;TemplateTitle&quot;:&quot;/default/account/mobileHeader.isml (app_storefront_base)&quot;,&quot;PipelineTitle&quot;:&quot;Account-Header (app_storefront_base)&quot;}" --><!-- dwMarker="rinclude" dwPipelineTitle="Account-Header (app_storefront_base)" dwPipelineURL="http://localhost:60606/target=/app_storefront_base/cartridge/controllers/Account.js&amp;start=Header" dwIsController="true" dwTemplateTitle="/default/account/mobileHeader.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/account/mobileHeader.isml" --><li class="nav-item d-lg-none" role="menuitem">
+        <a href="https://demo-na01-nebraskafurnituremart.demandware.net/on/demandware.store/Sites-RefArch-Site/en_US/Login-Show" class="nav-link"><!-- dwMarker="link" dwPipelineTitle="Login-Show (app_storefront_base)" dwIsController="true" dwPipelineURL="http://localhost:60606/target=/app_storefront_base/cartridge/controllers/Login.js&amp;start=Show" -->
+            <i class="fa fa-sign-in" aria-hidden="true"></i>
+            <span class="user-message">Login</span>
+        </a>
+    </li>
+
+
+            
+
+        </ul>
+    </div>
+</nav>
+
+                </div>
+            </div>
+        </div>
+        <div class="search-mobile d-sm-none">
+            <!-- dwMarker="linclude" dwTemplateTitle="/default/components/header/search.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/components/header/search.isml" -->
+<div class="site-search">
+	<form role="search"
+          action="/s/RefArch/search?lang=en_US"
+          method="get"
+          name="simpleSearch">
+        <input class="form-control search-field"
+               type="search"
+               name="q"
+               value=""
+               placeholder="Search (keywords,etc)"
+               role="combobox"
+               aria-describedby="search-assistive-text"
+               aria-haspopup="listbox"
+               aria-owns="search-results"
+               aria-expanded="false"
+               aria-autocomplete="list"
+               aria-activedescendant=""
+               aria-controls="search-results"
+               aria-label="Enter Keyword or Item No." />
+        <button type="reset" name="reset-button" class="fa fa-times reset-button d-none" aria-label="Clear search keywords"></button>
+        <button type="submit" name="search-button" class="fa fa-search" aria-label="Submit search keywords"></button>
+        <div class="suggestions-wrapper" data-url="/on/demandware.store/Sites-RefArch-Site/en_US/SearchServices-GetSuggestions?q="></div>
+        <input type="hidden" value="en_US" name="lang">
+	</form>
+</div>
+
+        </div>
+    </nav>
+</header>
+
+<div role="main" id="maincontent">
+<!-- dwMarker="decorator" dwTemplateTitle="/default/common/layout/page.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/common/layout/page.isml" -->
+
+    
+
+    <!-- +1.888.555.0199 --><!--This phone is a requirement to support existing Gomez monitor of SiteGenesis. Demadware customers can remove this.-->
+    <div class="home-main homepage">
+        <!-- dwMarker="slot" dwContentID="home-main-m" dwContext="global"-->
+	 
+
+
+	
+	
+		<style>
+@media (max-width: 543px) {
+    .main-callout {
+        background-image: url(https://demo-na01-nebraskafurnituremart.demandware.net/on/demandware.static/-/Library-Sites-RefArchSharedLibrary/default/dwed7f2c2d/images/homepage/homepage-4/small.jpg);
+    }
+}
+@media (max-width: 768px) and (min-width: 544px) {
+    .main-callout {
+        background-image: url(https://demo-na01-nebraskafurnituremart.demandware.net/on/demandware.static/-/Library-Sites-RefArchSharedLibrary/default/dwee286bb4/images/homepage/homepage-4/medium.jpg);
+    }
+}
+@media (min-width: 992px) {
+    .main-callout {
+        background-image: url(https://demo-na01-nebraskafurnituremart.demandware.net/on/demandware.static/-/Library-Sites-RefArchSharedLibrary/default/dwdebe6fbf/images/homepage/homepage-4/large.jpg);
+    }
+}
+</style>
+<div class="hero main-callout">
+<h1 class="page-title">Summer Style</h1>
+</div>
+	
+
+ 
+	
+    </div>
+
+    <div class="container home-categories homepage">
+        <div class="row home-main-categories no-gutters">
+            <!-- dwMarker="slot" dwContentID="home-categories-m" dwContext="global"-->
+	 
+
+
+	
+	
+		<style>
+@media (max-width: 543px) {
+    .womens-dresses {
+        background-image: url(https://demo-na01-nebraskafurnituremart.demandware.net/on/demandware.static/-/Library-Sites-RefArchSharedLibrary/default/dw26a90d55/images/homepage/homepage-5/small.jpg);
+    }
+    .womens-jewelry {
+        background-image: url(https://demo-na01-nebraskafurnituremart.demandware.net/on/demandware.static/-/Library-Sites-RefArchSharedLibrary/default/dwfd5b8a08/images/homepage/homepage-6/small.jpg);
+    }
+    .shop-red {
+        background-image: url(https://demo-na01-nebraskafurnituremart.demandware.net/on/demandware.static/-/Library-Sites-RefArchSharedLibrary/default/dwfa01d0ce/images/homepage/homepage-1/small.jpg);
+    }
+    .mens-jackets {
+        background-image: url(https://demo-na01-nebraskafurnituremart.demandware.net/on/demandware.static/-/Library-Sites-RefArchSharedLibrary/default/dwe5e27bf7/images/homepage/homepage-3/small.jpg);
+    }
+}
+@media (max-width: 768px) and (min-width: 544px) {
+    .womens-dresses {
+        background-image: url(https://demo-na01-nebraskafurnituremart.demandware.net/on/demandware.static/-/Library-Sites-RefArchSharedLibrary/default/dw85f335a7/images/homepage/homepage-5/medium.jpg);
+    }
+    .womens-jewelry {
+        background-image: url(https://demo-na01-nebraskafurnituremart.demandware.net/on/demandware.static/-/Library-Sites-RefArchSharedLibrary/default/dw9e1ed0da/images/homepage/homepage-6/medium.jpg);
+    }
+    .shop-red {
+        background-image: url(https://demo-na01-nebraskafurnituremart.demandware.net/on/demandware.static/-/Library-Sites-RefArchSharedLibrary/default/dw550ca12a/images/homepage/homepage-1/medium.jpg);
+    }
+}
+@media (min-width: 544px) {
+    .mens-jackets {
+        background-image: url(https://demo-na01-nebraskafurnituremart.demandware.net/on/demandware.static/-/Library-Sites-RefArchSharedLibrary/default/dw0a106ba7/images/homepage/homepage-3/large.jpg);
+    }
+}
+@media (min-width: 992px) {
+    .womens-dresses {
+        background-image: url(https://demo-na01-nebraskafurnituremart.demandware.net/on/demandware.static/-/Library-Sites-RefArchSharedLibrary/default/dw044da1de/images/homepage/homepage-5/large.jpg);
+    }
+    .womens-jewelry {
+        background-image: url(https://demo-na01-nebraskafurnituremart.demandware.net/on/demandware.static/-/Library-Sites-RefArchSharedLibrary/default/dwefe8c765/images/homepage/homepage-6/large.jpg);
+    }
+    .shop-red {
+        background-image: url(https://demo-na01-nebraskafurnituremart.demandware.net/on/demandware.static/-/Library-Sites-RefArchSharedLibrary/default/dwfdd994e5/images/homepage/homepage-1/large.jpg);
+    }
+}
+</style>
+
+<div class="col-sm-8">
+  <div class="row no-gutters">
+    <div class="col-sm-6">
+      <a href="https://demo-na01-nebraskafurnituremart.demandware.net/s/RefArch/womens/clothing/dresses/?lang=en_US">
+        <div class="womens-dresses half-height category-tile">
+          <h2 class="hp-category-message">
+            Women's Dresses
+          </h2>
+        </div>
+      </a>
+    </div>
+    <div class="col-sm-6">
+      <a href="https://demo-na01-nebraskafurnituremart.demandware.net/s/RefArch/womens/jewelry/?lang=en_US">
+        <div class="womens-jewelry half-height category-tile">
+          <h2 class="hp-category-message">
+            Women's Jewelry
+          </h2>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <a href="https://demo-na01-nebraskafurnituremart.demandware.net/s/RefArch/womens/clothing/feeling%20red/?lang=en_US">
+        <div class="shop-red half-height category-tile">
+          <h2 class="hp-promotion-message">
+            Shop Red
+          </h2>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+<div class="col">
+  <a href="https://demo-na01-nebraskafurnituremart.demandware.net/s/RefArch/mens/clothing/jackets%20%26%20coats/?lang=en_US">
+    <div class="mens-jackets full-height category-tile">
+        <h2 class="hp-category-message">
+            Men's Jackets
+        </h2>
+    </div>
+  </a>
+</div>
+	
+
+ 
+	
+        </div>
+    </div>
+
+    <div class="container home-product-tiles homepage">
+        <div class="hp-product-grid" itemtype="http://schema.org/SomeProducts" itemid="#product">
+            <!-- dwMarker="slot" dwContentID="home-products-m" dwContext="global"-->
+	 
+
+
+	<!-- dwMarker="linclude" dwTemplateTitle="/default//components/modules.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default//components/modules.isml" -->
+
+
+
+<!-- dwMarker="dw-object-rinclude" data="{&quot;TemplateURL&quot;:&quot;http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/slots/product/homePageProductSlot.isml&quot;,&quot;IsController&quot;:false,&quot;PageProcessingTime&quot;:3,&quot;TemplateTitle&quot;:&quot;/default/slots/product/homePageProductSlot.isml (app_storefront_base)&quot;,&quot;PipelineTitle&quot;:&quot;Internal&quot;}" --><!-- dwMarker="rinclude" dwPipelineTitle="Internal" dwIsController="false" dwTemplateTitle="/default/slots/product/homePageProductSlot.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/slots/product/homePageProductSlot.isml" --><div class="homepage-product-listing row">
+
+    
+
+        <div class="col-6 col-sm-4">
+            
+
+<!-- dwMarker="dw-object-rinclude" data="{&quot;TemplateURL&quot;:&quot;http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/product/gridTile.isml&quot;,&quot;IsController&quot;:true,&quot;PipelineURL&quot;:&quot;http://localhost:60606/target=/app_storefront_base/cartridge/controllers/Tile.js&amp;start=Show&quot;,&quot;PageProcessingTime&quot;:17,&quot;PageCacheExpires&quot;:&quot;08/09/2019 6:04 pm&quot;,&quot;TemplateTitle&quot;:&quot;/default/product/gridTile.isml (app_storefront_base)&quot;,&quot;PipelineTitle&quot;:&quot;Tile-Show (app_storefront_base)&quot;}" --><!-- dwMarker="rinclude" dwPipelineTitle="Tile-Show (app_storefront_base)" dwPipelineURL="http://localhost:60606/target=/app_storefront_base/cartridge/controllers/Tile.js&amp;start=Show" dwIsController="true" dwTemplateTitle="/default/product/gridTile.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/product/gridTile.isml" --><div class="product" data-pid="701644329402M">
+    <!-- dwMarker="linclude" dwTemplateTitle="/default/product/productTile.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/product/productTile.isml" -->
+<div class="product-tile">
+    <!-- dwMarker="product" dwContentID="87ba2fa2c12c8626c466eefbb8" -->
+    <!-- dwMarker="linclude" dwTemplateTitle="/default/product/components/productTileImage.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/product/components/productTileImage.isml" -->
+<div class="image-container">
+    <a href="/s/RefArch/sleeveless-pleated-top/701644329402M.html?lang=en_US">
+        <img class="tile-image"
+             src="/on/demandware.static/-/Sites-apparel-m-catalog/default/dw384b6cda/images/medium/PG.10251227.JJE86XX.PZ.jpg"
+             alt="Sleeveless Pleated Top."
+             title="Sleeveless Pleated Top., New Coral"
+             />
+    </a>
+    
+        <a class="quickview hidden-sm-down" href="/on/demandware.store/Sites-RefArch-Site/en_US/Product-ShowQuickView?pid=701644329402M"
+           data-toggle="modal"
+           data-target="#quickViewModal"
+           title="Quick View for Sleeveless Pleated Top."
+           aria-label="Quick View for Sleeveless Pleated Top."
+        ><!-- dwMarker="link" dwPipelineTitle="Product-ShowQuickView (app_storefront_base)" dwIsController="true" dwPipelineURL="http://localhost:60606/target=/app_storefront_base/cartridge/controllers/Product.js&amp;start=ShowQuickView" -->
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-inverse fa-stack-2x"></i>
+                <i class="fa fa-expand fa-stack-1x"></i>
+            </span>
+        </a>
+    
+</div>
+
+    <div class="tile-body">
+        
+            <!-- dwMarker="linclude" dwTemplateTitle="/default/product/components/productTileSwatch.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/product/components/productTileSwatch.isml" -->
+<div class="color-swatches">
+    <div class="swatches">
+        
+            
+                
+                    <a href="/s/RefArch/sleeveless-pleated-top/25696513M.html?lang=en_US&amp;dwvar_25696513M_color=JJE86XX">
+                        <span>
+                            <img class="swatch swatch-circle"
+                                 data-index="0.0"
+                                 style="background-image: url(/on/demandware.static/-/Sites-apparel-m-catalog/default/dw48dad63d/images/swatch/PG.10251227.JJE86XX.CP.jpg)"
+                                 src="/on/demandware.static/-/Sites-apparel-m-catalog/default/dw48dad63d/images/swatch/PG.10251227.JJE86XX.CP.jpg"
+                                 alt="Sleeveless Pleated Top., New Coral, swatch"/>
+                        </span>
+                    </a>
+                
+            
+        
+    </div>
+</div>
+
+        
+
+        <!-- dwMarker="linclude" dwTemplateTitle="/default/product/components/productTileName.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/product/components/productTileName.isml" -->
+<div class="pdp-link">
+    <a class="link" href="/s/RefArch/sleeveless-pleated-top/701644329402M.html?lang=en_US">Sleeveless Pleated Top.</a>
+</div>
+
+
+        
+        
+            <!-- dwMarker="linclude" dwTemplateTitle="/default/product/components/pricing/main.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/product/components/pricing/main.isml" -->
+
+    <div class="price">
+        
+        <!-- dwMarker="linclude" dwTemplateTitle="/default//product/components/pricing/default.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default//product/components/pricing/default.isml" -->
+<span>
+    
+
+    
+
+    
+    <span class="sales">
+        
+        
+        
+            <span class="value" content="49.00">
+        
+        <!-- dwMarker="linclude" dwTemplateTitle="/default//product/components/pricing/formatted.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default//product/components/pricing/formatted.isml" -->
+$49.00
+
+
+        </span>
+    </span>
+</span>
+
+    </div>
+
+
+        
+
+        
+            <!-- dwMarker="linclude" dwTemplateTitle="/default/product/productTileFooter.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/product/productTileFooter.isml" -->
+<div class="row tile-body-footer">
+    <div class="ratings col-xs-12 col-sm-6">
+        <span class="sr-only">5 out of 5 Customer Rating</span>
+        <!-- dwMarker="linclude" dwTemplateTitle="/default/product/components/ratings.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/product/components/ratings.isml" -->
+
+    <!-- dwMarker="linclude" dwTemplateTitle="/default/product/components/productRating.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/product/components/productRating.isml" -->
+
+    <i class="fa
+        
+            fa-star
+        
+        " aria-hidden="true">
+    </i>
+
+    <i class="fa
+        
+            fa-star
+        
+        " aria-hidden="true">
+    </i>
+
+    <i class="fa
+        
+            fa-star
+        
+        " aria-hidden="true">
+    </i>
+
+    <i class="fa
+        
+            fa-star
+        
+        " aria-hidden="true">
+    </i>
+
+    <i class="fa
+        
+            fa-star
+        
+        " aria-hidden="true">
+    </i>
+
+
+    </div>
+</div>
+
+        
+    </div>
+    <!-- END_dwmarker -->
+</div>
+
+</div>
+
+        </div>
+
+        
+            <div class="card col-6 col-sm-4 hp-product-content">
+                <div class="card-body">
+                    <!-- dwMarker="linclude" dwTemplateTitle="/default//components/content/contentAsset.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default//components/content/contentAsset.isml" -->
+
+	
+	<!-- dwMarker="dw-object-rinclude" data="{&quot;TemplateURL&quot;:&quot;http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/components/content/contentAssetInc.isml&quot;,&quot;IsController&quot;:true,&quot;PipelineURL&quot;:&quot;http://localhost:60606/target=/app_storefront_base/cartridge/controllers/Page.js&amp;start=Include&quot;,&quot;PageProcessingTime&quot;:4,&quot;PageCacheExpires&quot;:&quot;08/09/2019 6:04 pm&quot;,&quot;TemplateTitle&quot;:&quot;/default/components/content/contentAssetInc.isml (app_storefront_base)&quot;,&quot;PipelineTitle&quot;:&quot;Page-Include (app_storefront_base)&quot;}" --><!-- dwMarker="rinclude" dwPipelineTitle="Page-Include (app_storefront_base)" dwPipelineURL="http://localhost:60606/target=/app_storefront_base/cartridge/controllers/Page.js&amp;start=Include" dwIsController="true" dwTemplateTitle="/default/components/content/contentAssetInc.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/components/content/contentAssetInc.isml" --><div class="content-asset"><!-- dwMarker="content" dwContentID="286b5a4792694cc94ae4e6e8c1" -->
+		<a href="https://demo-na01-nebraskafurnituremart.demandware.net/s/RefArch/new%20arrivals/?lang=en_US">
+<span class="largeText">Styles to Love</span>
+<br />
+<span>Only Online</span>
+</a>
+	</div> <!-- End content-asset -->
+
+
+
+                </div>
+            </div>
+        
+
+    
+
+        <div class="col-6 col-sm-4">
+            
+
+<!-- dwMarker="dw-object-rinclude" data="{&quot;TemplateURL&quot;:&quot;http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/product/gridTile.isml&quot;,&quot;IsController&quot;:true,&quot;PipelineURL&quot;:&quot;http://localhost:60606/target=/app_storefront_base/cartridge/controllers/Tile.js&amp;start=Show&quot;,&quot;PageProcessingTime&quot;:15,&quot;PageCacheExpires&quot;:&quot;08/09/2019 6:04 pm&quot;,&quot;TemplateTitle&quot;:&quot;/default/product/gridTile.isml (app_storefront_base)&quot;,&quot;PipelineTitle&quot;:&quot;Tile-Show (app_storefront_base)&quot;}" --><!-- dwMarker="rinclude" dwPipelineTitle="Tile-Show (app_storefront_base)" dwPipelineURL="http://localhost:60606/target=/app_storefront_base/cartridge/controllers/Tile.js&amp;start=Show" dwIsController="true" dwTemplateTitle="/default/product/gridTile.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/product/gridTile.isml" --><div class="product" data-pid="701644391737M">
+    <!-- dwMarker="linclude" dwTemplateTitle="/default/product/productTile.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/product/productTile.isml" -->
+<div class="product-tile">
+    <!-- dwMarker="product" dwContentID="4106a33e3cc13d583d38be7329" -->
+    <!-- dwMarker="linclude" dwTemplateTitle="/default/product/components/productTileImage.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/product/components/productTileImage.isml" -->
+<div class="image-container">
+    <a href="/s/RefArch/woven-trimmed-cardigan/701644391737M.html?lang=en_US">
+        <img class="tile-image"
+             src="/on/demandware.static/-/Sites-apparel-m-catalog/default/dwc1da9c4c/images/medium/PG.10256582.JJI15XX.PZ.jpg"
+             alt="Woven Trimmed Cardigan."
+             title="Woven Trimmed Cardigan., White"
+             />
+    </a>
+    
+        <a class="quickview hidden-sm-down" href="/on/demandware.store/Sites-RefArch-Site/en_US/Product-ShowQuickView?pid=701644391737M"
+           data-toggle="modal"
+           data-target="#quickViewModal"
+           title="Quick View for Woven Trimmed Cardigan."
+           aria-label="Quick View for Woven Trimmed Cardigan."
+        ><!-- dwMarker="link" dwPipelineTitle="Product-ShowQuickView (app_storefront_base)" dwIsController="true" dwPipelineURL="http://localhost:60606/target=/app_storefront_base/cartridge/controllers/Product.js&amp;start=ShowQuickView" -->
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-inverse fa-stack-2x"></i>
+                <i class="fa fa-expand fa-stack-1x"></i>
+            </span>
+        </a>
+    
+</div>
+
+    <div class="tile-body">
+        
+            <!-- dwMarker="linclude" dwTemplateTitle="/default/product/components/productTileSwatch.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/product/components/productTileSwatch.isml" -->
+<div class="color-swatches">
+    <div class="swatches">
+        
+            
+                
+                    <a href="/s/RefArch/woven-trimmed-cardigan/25697682M.html?dwvar_25697682M_color=JJI15XX&amp;lang=en_US">
+                        <span>
+                            <img class="swatch swatch-circle"
+                                 data-index="0.0"
+                                 style="background-image: url(/on/demandware.static/-/Sites-apparel-m-catalog/default/dw6692d7ef/images/swatch/PG.10256582.JJI15XX.CP.jpg)"
+                                 src="/on/demandware.static/-/Sites-apparel-m-catalog/default/dw6692d7ef/images/swatch/PG.10256582.JJI15XX.CP.jpg"
+                                 alt="Woven Trimmed Cardigan., White, swatch"/>
+                        </span>
+                    </a>
+                
+            
+        
+    </div>
+</div>
+
+        
+
+        <!-- dwMarker="linclude" dwTemplateTitle="/default/product/components/productTileName.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/product/components/productTileName.isml" -->
+<div class="pdp-link">
+    <a class="link" href="/s/RefArch/woven-trimmed-cardigan/701644391737M.html?lang=en_US">Woven Trimmed Cardigan.</a>
+</div>
+
+
+        
+        
+            <!-- dwMarker="linclude" dwTemplateTitle="/default/product/components/pricing/main.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/product/components/pricing/main.isml" -->
+
+    <div class="price">
+        
+        <!-- dwMarker="linclude" dwTemplateTitle="/default//product/components/pricing/default.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default//product/components/pricing/default.isml" -->
+<span>
+    
+
+    
+
+    
+    <span class="sales">
+        
+        
+        
+            <span class="value" content="89.00">
+        
+        <!-- dwMarker="linclude" dwTemplateTitle="/default//product/components/pricing/formatted.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default//product/components/pricing/formatted.isml" -->
+$89.00
+
+
+        </span>
+    </span>
+</span>
+
+    </div>
+
+
+        
+
+        
+            <!-- dwMarker="linclude" dwTemplateTitle="/default/product/productTileFooter.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/product/productTileFooter.isml" -->
+<div class="row tile-body-footer">
+    <div class="ratings col-xs-12 col-sm-6">
+        <span class="sr-only">3.6 out of 5 Customer Rating</span>
+        <!-- dwMarker="linclude" dwTemplateTitle="/default/product/components/ratings.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/product/components/ratings.isml" -->
+
+    <!-- dwMarker="linclude" dwTemplateTitle="/default/product/components/productRating.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/product/components/productRating.isml" -->
+
+    <i class="fa
+        
+            fa-star
+        
+        " aria-hidden="true">
+    </i>
+
+    <i class="fa
+        
+            fa-star
+        
+        " aria-hidden="true">
+    </i>
+
+    <i class="fa
+        
+            fa-star
+        
+        " aria-hidden="true">
+    </i>
+
+    <i class="fa
+        
+            fa-star-half-o
+        
+        " aria-hidden="true">
+    </i>
+
+    <i class="fa
+        
+            fa-star-o
+        
+        " aria-hidden="true">
+    </i>
+
+
+    </div>
+</div>
+
+        
+    </div>
+    <!-- END_dwmarker -->
+</div>
+
+</div>
+
+        </div>
+
+        
+
+    
+
+        <div class="col-6 col-sm-4">
+            
+
+<!-- dwMarker="dw-object-rinclude" data="{&quot;TemplateURL&quot;:&quot;http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/product/gridTile.isml&quot;,&quot;IsController&quot;:true,&quot;PipelineURL&quot;:&quot;http://localhost:60606/target=/app_storefront_base/cartridge/controllers/Tile.js&amp;start=Show&quot;,&quot;PageProcessingTime&quot;:13,&quot;PageCacheExpires&quot;:&quot;08/09/2019 6:04 pm&quot;,&quot;TemplateTitle&quot;:&quot;/default/product/gridTile.isml (app_storefront_base)&quot;,&quot;PipelineTitle&quot;:&quot;Tile-Show (app_storefront_base)&quot;}" --><!-- dwMarker="rinclude" dwPipelineTitle="Tile-Show (app_storefront_base)" dwPipelineURL="http://localhost:60606/target=/app_storefront_base/cartridge/controllers/Tile.js&amp;start=Show" dwIsController="true" dwTemplateTitle="/default/product/gridTile.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/product/gridTile.isml" --><div class="product" data-pid="750518699578M">
+    <!-- dwMarker="linclude" dwTemplateTitle="/default/product/productTile.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/product/productTile.isml" -->
+<div class="product-tile">
+    <!-- dwMarker="product" dwContentID="2df3993990d8637797004f7400" -->
+    <!-- dwMarker="linclude" dwTemplateTitle="/default/product/components/productTileImage.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/product/components/productTileImage.isml" -->
+<div class="image-container">
+    <a href="/s/RefArch/black-single-pleat-athletic-fit-wool-suit/750518699578M.html?lang=en_US">
+        <img class="tile-image"
+             src="/on/demandware.static/-/Sites-apparel-m-catalog/default/dwe448e087/images/medium/PG.52001RUBN4Q.BLACKFB.PZ.jpg"
+             alt="Black Single Pleat Athletic Fit Wool Suit"
+             title="Black Single Pleat Athletic Fit Wool Suit, Black"
+             />
+    </a>
+    
+        <a class="quickview hidden-sm-down" href="/on/demandware.store/Sites-RefArch-Site/en_US/Product-ShowQuickView?pid=750518699578M"
+           data-toggle="modal"
+           data-target="#quickViewModal"
+           title="Quick View for Black Single Pleat Athletic Fit Wool Suit"
+           aria-label="Quick View for Black Single Pleat Athletic Fit Wool Suit"
+        ><!-- dwMarker="link" dwPipelineTitle="Product-ShowQuickView (app_storefront_base)" dwIsController="true" dwPipelineURL="http://localhost:60606/target=/app_storefront_base/cartridge/controllers/Product.js&amp;start=ShowQuickView" -->
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-inverse fa-stack-2x"></i>
+                <i class="fa fa-expand fa-stack-1x"></i>
+            </span>
+        </a>
+    
+</div>
+
+    <div class="tile-body">
+        
+            <!-- dwMarker="linclude" dwTemplateTitle="/default/product/components/productTileSwatch.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/product/components/productTileSwatch.isml" -->
+<div class="color-swatches">
+    <div class="swatches">
+        
+            
+                
+                    <a href="/s/RefArch/black-single-pleat-athletic-fit-wool-suit/25604524M.html?dwvar_25604524M_color=BLACKFB&amp;lang=en_US">
+                        <span>
+                            <img class="swatch swatch-circle"
+                                 data-index="0.0"
+                                 style="background-image: url(/on/demandware.static/-/Sites-apparel-m-catalog/default/dw52d765ab/images/swatch/PG.52001RUBN4Q.BLACKFB.CP.jpg)"
+                                 src="/on/demandware.static/-/Sites-apparel-m-catalog/default/dw52d765ab/images/swatch/PG.52001RUBN4Q.BLACKFB.CP.jpg"
+                                 alt="Black Single Pleat Athletic Fit Wool Suit, Black, swatch"/>
+                        </span>
+                    </a>
+                
+            
+        
+    </div>
+</div>
+
+        
+
+        <!-- dwMarker="linclude" dwTemplateTitle="/default/product/components/productTileName.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/product/components/productTileName.isml" -->
+<div class="pdp-link">
+    <a class="link" href="/s/RefArch/black-single-pleat-athletic-fit-wool-suit/750518699578M.html?lang=en_US">Black Single Pleat Athletic Fit Wool Suit</a>
+</div>
+
+
+        
+        
+            <!-- dwMarker="linclude" dwTemplateTitle="/default/product/components/pricing/main.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/product/components/pricing/main.isml" -->
+
+    <div class="price">
+        
+        <!-- dwMarker="linclude" dwTemplateTitle="/default//product/components/pricing/default.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default//product/components/pricing/default.isml" -->
+<span>
+    
+
+    
+
+    
+    <span class="sales">
+        
+        
+        
+            <span class="value" content="299.99">
+        
+        <!-- dwMarker="linclude" dwTemplateTitle="/default//product/components/pricing/formatted.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default//product/components/pricing/formatted.isml" -->
+$299.99
+
+
+        </span>
+    </span>
+</span>
+
+    </div>
+
+
+        
+
+        
+            <!-- dwMarker="linclude" dwTemplateTitle="/default/product/productTileFooter.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/product/productTileFooter.isml" -->
+<div class="row tile-body-footer">
+    <div class="ratings col-xs-12 col-sm-6">
+        <span class="sr-only">3.4 out of 5 Customer Rating</span>
+        <!-- dwMarker="linclude" dwTemplateTitle="/default/product/components/ratings.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/product/components/ratings.isml" -->
+
+    <!-- dwMarker="linclude" dwTemplateTitle="/default/product/components/productRating.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/product/components/productRating.isml" -->
+
+    <i class="fa
+        
+            fa-star
+        
+        " aria-hidden="true">
+    </i>
+
+    <i class="fa
+        
+            fa-star
+        
+        " aria-hidden="true">
+    </i>
+
+    <i class="fa
+        
+            fa-star
+        
+        " aria-hidden="true">
+    </i>
+
+    <i class="fa
+        
+            fa-star-half-o
+        
+        " aria-hidden="true">
+    </i>
+
+    <i class="fa
+        
+            fa-star-o
+        
+        " aria-hidden="true">
+    </i>
+
+
+    </div>
+</div>
+
+        
+    </div>
+    <!-- END_dwmarker -->
+</div>
+
+</div>
+
+        </div>
+
+        
+
+    
+
+        <div class="col-6 col-sm-4">
+            
+
+<!-- dwMarker="dw-object-rinclude" data="{&quot;TemplateURL&quot;:&quot;http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/product/gridTile.isml&quot;,&quot;IsController&quot;:true,&quot;PipelineURL&quot;:&quot;http://localhost:60606/target=/app_storefront_base/cartridge/controllers/Tile.js&amp;start=Show&quot;,&quot;PageProcessingTime&quot;:40,&quot;PageCacheExpires&quot;:&quot;08/09/2019 6:04 pm&quot;,&quot;TemplateTitle&quot;:&quot;/default/product/gridTile.isml (app_storefront_base)&quot;,&quot;PipelineTitle&quot;:&quot;Tile-Show (app_storefront_base)&quot;}" --><!-- dwMarker="rinclude" dwPipelineTitle="Tile-Show (app_storefront_base)" dwPipelineURL="http://localhost:60606/target=/app_storefront_base/cartridge/controllers/Tile.js&amp;start=Show" dwIsController="true" dwTemplateTitle="/default/product/gridTile.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/product/gridTile.isml" --><div class="product" data-pid="25519318M">
+    <!-- dwMarker="linclude" dwTemplateTitle="/default/product/productTile.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/product/productTile.isml" -->
+<div class="product-tile">
+    <!-- dwMarker="product" dwContentID="1a82dd525952e8ff1812b60735" -->
+    <!-- dwMarker="linclude" dwTemplateTitle="/default/product/components/productTileImage.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/product/components/productTileImage.isml" -->
+<div class="image-container">
+    <a href="/s/RefArch/3/4-sleeve-v-neck-top/25519318M.html?lang=en_US">
+        <img class="tile-image"
+             src="/on/demandware.static/-/Sites-apparel-m-catalog/default/dw6bb6ff48/images/medium/PG.10221714.JJ169XX.PZ.jpg"
+             alt="3/4 Sleeve V-Neck Top"
+             title="3/4 Sleeve V-Neck Top, "
+             />
+    </a>
+    
+        <a class="quickview hidden-sm-down" href="/on/demandware.store/Sites-RefArch-Site/en_US/Product-ShowQuickView?pid=25519318M"
+           data-toggle="modal"
+           data-target="#quickViewModal"
+           title="Quick View for 3/4 Sleeve V-Neck Top"
+           aria-label="Quick View for 3/4 Sleeve V-Neck Top"
+        ><!-- dwMarker="link" dwPipelineTitle="Product-ShowQuickView (app_storefront_base)" dwIsController="true" dwPipelineURL="http://localhost:60606/target=/app_storefront_base/cartridge/controllers/Product.js&amp;start=ShowQuickView" -->
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-inverse fa-stack-2x"></i>
+                <i class="fa fa-expand fa-stack-1x"></i>
+            </span>
+        </a>
+    
+</div>
+
+    <div class="tile-body">
+        
+            <!-- dwMarker="linclude" dwTemplateTitle="/default/product/components/productTileSwatch.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/product/components/productTileSwatch.isml" -->
+<div class="color-swatches">
+    <div class="swatches">
+        
+            
+                
+                    <a href="/s/RefArch/3/4-sleeve-v-neck-top/25519318M.html?dwvar_25519318M_color=JJ169XX&amp;lang=en_US">
+                        <span>
+                            <img class="swatch swatch-circle"
+                                 data-index="0.0"
+                                 style="background-image: url(/on/demandware.static/-/Sites-apparel-m-catalog/default/dwab697a65/images/swatch/PG.10221714.JJ169XX.CP.jpg)"
+                                 src="/on/demandware.static/-/Sites-apparel-m-catalog/default/dwab697a65/images/swatch/PG.10221714.JJ169XX.CP.jpg"
+                                 alt="3/4 Sleeve V-Neck Top, Black, swatch"/>
+                        </span>
+                    </a>
+                
+            
+                
+                    <a href="/s/RefArch/3/4-sleeve-v-neck-top/25519318M.html?dwvar_25519318M_color=JJ370XX&amp;lang=en_US">
+                        <span>
+                            <img class="swatch swatch-circle"
+                                 data-index="1.0"
+                                 style="background-image: url(/on/demandware.static/-/Sites-apparel-m-catalog/default/dwbce2d828/images/swatch/PG.10221714.JJ370XX.CP.jpg)"
+                                 src="/on/demandware.static/-/Sites-apparel-m-catalog/default/dwbce2d828/images/swatch/PG.10221714.JJ370XX.CP.jpg"
+                                 alt="3/4 Sleeve V-Neck Top, Butter, swatch"/>
+                        </span>
+                    </a>
+                
+            
+                
+                    <a href="/s/RefArch/3/4-sleeve-v-neck-top/25519318M.html?dwvar_25519318M_color=JJ8UTXX&amp;lang=en_US">
+                        <span>
+                            <img class="swatch swatch-circle"
+                                 data-index="2.0"
+                                 style="background-image: url(/on/demandware.static/-/Sites-apparel-m-catalog/default/dw305a0ea6/images/swatch/PG.10221714.JJ8UTXX.CP.jpg)"
+                                 src="/on/demandware.static/-/Sites-apparel-m-catalog/default/dw305a0ea6/images/swatch/PG.10221714.JJ8UTXX.CP.jpg"
+                                 alt="3/4 Sleeve V-Neck Top, Icy Mint, swatch"/>
+                        </span>
+                    </a>
+                
+            
+                
+                    <span>
+                        <a href="/s/RefArch/3/4-sleeve-v-neck-top/25519318M.html?lang=en_US">...</a>
+                    </span>
+                    
+        
+    </div>
+</div>
+
+        
+
+        <!-- dwMarker="linclude" dwTemplateTitle="/default/product/components/productTileName.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/product/components/productTileName.isml" -->
+<div class="pdp-link">
+    <a class="link" href="/s/RefArch/3/4-sleeve-v-neck-top/25519318M.html?lang=en_US">3/4 Sleeve V-Neck Top</a>
+</div>
+
+
+        
+        
+            <!-- dwMarker="linclude" dwTemplateTitle="/default/product/components/pricing/main.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/product/components/pricing/main.isml" -->
+
+    <div class="price">
+        
+        <!-- dwMarker="linclude" dwTemplateTitle="/default//product/components/pricing/default.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default//product/components/pricing/default.isml" -->
+<span>
+    
+
+    
+
+    
+    <span class="sales">
+        
+        
+        
+            <span class="value" content="24.00">
+        
+        <!-- dwMarker="linclude" dwTemplateTitle="/default//product/components/pricing/formatted.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default//product/components/pricing/formatted.isml" -->
+$24.00
+
+
+        </span>
+    </span>
+</span>
+
+    </div>
+
+
+        
+
+        
+            <!-- dwMarker="linclude" dwTemplateTitle="/default/product/productTileFooter.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/product/productTileFooter.isml" -->
+<div class="row tile-body-footer">
+    <div class="ratings col-xs-12 col-sm-6">
+        <span class="sr-only">3.6 out of 5 Customer Rating</span>
+        <!-- dwMarker="linclude" dwTemplateTitle="/default/product/components/ratings.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/product/components/ratings.isml" -->
+
+    <!-- dwMarker="linclude" dwTemplateTitle="/default/product/components/productRating.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/product/components/productRating.isml" -->
+
+    <i class="fa
+        
+            fa-star
+        
+        " aria-hidden="true">
+    </i>
+
+    <i class="fa
+        
+            fa-star
+        
+        " aria-hidden="true">
+    </i>
+
+    <i class="fa
+        
+            fa-star
+        
+        " aria-hidden="true">
+    </i>
+
+    <i class="fa
+        
+            fa-star-half-o
+        
+        " aria-hidden="true">
+    </i>
+
+    <i class="fa
+        
+            fa-star-o
+        
+        " aria-hidden="true">
+    </i>
+
+
+    </div>
+</div>
+
+        
+    </div>
+    <!-- END_dwmarker -->
+</div>
+
+</div>
+
+        </div>
+
+        
+
+    
+
+        <div class="col-6 col-sm-4">
+            
+
+<!-- dwMarker="dw-object-rinclude" data="{&quot;TemplateURL&quot;:&quot;http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/product/gridTile.isml&quot;,&quot;IsController&quot;:true,&quot;PipelineURL&quot;:&quot;http://localhost:60606/target=/app_storefront_base/cartridge/controllers/Tile.js&amp;start=Show&quot;,&quot;PageProcessingTime&quot;:14,&quot;PageCacheExpires&quot;:&quot;08/09/2019 6:04 pm&quot;,&quot;TemplateTitle&quot;:&quot;/default/product/gridTile.isml (app_storefront_base)&quot;,&quot;PipelineTitle&quot;:&quot;Tile-Show (app_storefront_base)&quot;}" --><!-- dwMarker="rinclude" dwPipelineTitle="Tile-Show (app_storefront_base)" dwPipelineURL="http://localhost:60606/target=/app_storefront_base/cartridge/controllers/Tile.js&amp;start=Show" dwIsController="true" dwTemplateTitle="/default/product/gridTile.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/product/gridTile.isml" --><div class="product" data-pid="013742003154M">
+    <!-- dwMarker="linclude" dwTemplateTitle="/default/product/productTile.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/product/productTile.isml" -->
+<div class="product-tile">
+    <!-- dwMarker="product" dwContentID="614de758db8b3ccf7247cf6865" -->
+    <!-- dwMarker="linclude" dwTemplateTitle="/default/product/components/productTileImage.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/product/components/productTileImage.isml" -->
+<div class="image-container">
+    <a href="/s/RefArch/cluster-drop-earring/013742003154M.html?lang=en_US">
+        <img class="tile-image"
+             src="/on/demandware.static/-/Sites-apparel-m-catalog/default/dw0892120b/images/medium/PG.60119273.JJG03XX.PZ.jpg"
+             alt="Cluster Drop Earring"
+             title="Cluster Drop Earring, Silver"
+             />
+    </a>
+    
+        <a class="quickview hidden-sm-down" href="/on/demandware.store/Sites-RefArch-Site/en_US/Product-ShowQuickView?pid=013742003154M"
+           data-toggle="modal"
+           data-target="#quickViewModal"
+           title="Quick View for Cluster Drop Earring"
+           aria-label="Quick View for Cluster Drop Earring"
+        ><!-- dwMarker="link" dwPipelineTitle="Product-ShowQuickView (app_storefront_base)" dwIsController="true" dwPipelineURL="http://localhost:60606/target=/app_storefront_base/cartridge/controllers/Product.js&amp;start=ShowQuickView" -->
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-inverse fa-stack-2x"></i>
+                <i class="fa fa-expand fa-stack-1x"></i>
+            </span>
+        </a>
+    
+</div>
+
+    <div class="tile-body">
+        
+            <!-- dwMarker="linclude" dwTemplateTitle="/default/product/components/productTileSwatch.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/product/components/productTileSwatch.isml" -->
+<div class="color-swatches">
+    <div class="swatches">
+        
+            
+                
+                    <a href="/s/RefArch/cluster-drop-earring/25720054M.html?dwvar_25720054M_color=JJG03XX&amp;lang=en_US">
+                        <span>
+                            <img class="swatch swatch-circle"
+                                 data-index="0.0"
+                                 style="background-image: url(/on/demandware.static/-/Sites-apparel-m-catalog/default/dw71a516d0/images/swatch/PG.60119273.JJG03XX.CP.jpg)"
+                                 src="/on/demandware.static/-/Sites-apparel-m-catalog/default/dw71a516d0/images/swatch/PG.60119273.JJG03XX.CP.jpg"
+                                 alt="Cluster Drop Earring, Silver, swatch"/>
+                        </span>
+                    </a>
+                
+            
+        
+    </div>
+</div>
+
+        
+
+        <!-- dwMarker="linclude" dwTemplateTitle="/default/product/components/productTileName.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/product/components/productTileName.isml" -->
+<div class="pdp-link">
+    <a class="link" href="/s/RefArch/cluster-drop-earring/013742003154M.html?lang=en_US">Cluster Drop Earring</a>
+</div>
+
+
+        
+        
+            <!-- dwMarker="linclude" dwTemplateTitle="/default/product/components/pricing/main.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/product/components/pricing/main.isml" -->
+
+    <div class="price">
+        
+        <!-- dwMarker="linclude" dwTemplateTitle="/default//product/components/pricing/default.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default//product/components/pricing/default.isml" -->
+<span>
+    
+
+    
+
+    
+    <span class="sales">
+        
+        
+        
+            <span class="value" content="26.00">
+        
+        <!-- dwMarker="linclude" dwTemplateTitle="/default//product/components/pricing/formatted.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default//product/components/pricing/formatted.isml" -->
+$26.00
+
+
+        </span>
+    </span>
+</span>
+
+    </div>
+
+
+        
+
+        
+            <!-- dwMarker="linclude" dwTemplateTitle="/default/product/productTileFooter.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/product/productTileFooter.isml" -->
+<div class="row tile-body-footer">
+    <div class="ratings col-xs-12 col-sm-6">
+        <span class="sr-only">5 out of 5 Customer Rating</span>
+        <!-- dwMarker="linclude" dwTemplateTitle="/default/product/components/ratings.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/product/components/ratings.isml" -->
+
+    <!-- dwMarker="linclude" dwTemplateTitle="/default/product/components/productRating.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/product/components/productRating.isml" -->
+
+    <i class="fa
+        
+            fa-star
+        
+        " aria-hidden="true">
+    </i>
+
+    <i class="fa
+        
+            fa-star
+        
+        " aria-hidden="true">
+    </i>
+
+    <i class="fa
+        
+            fa-star
+        
+        " aria-hidden="true">
+    </i>
+
+    <i class="fa
+        
+            fa-star
+        
+        " aria-hidden="true">
+    </i>
+
+    <i class="fa
+        
+            fa-star
+        
+        " aria-hidden="true">
+    </i>
+
+
+    </div>
+</div>
+
+        
+    </div>
+    <!-- END_dwmarker -->
+</div>
+
+</div>
+
+        </div>
+
+        
+
+    
+</div>
+ 
+	
+        </div>
+    </div>
+
+    <div class="homepage shop-the-style">
+        <!-- dwMarker="slot" dwContentID="home-product-set-m" dwContext="global"-->
+	 
+
+
+	
+	
+		<style>
+@media (max-width: 543px) {
+    .shop-the-style .hero {
+        background-image: url(https://demo-na01-nebraskafurnituremart.demandware.net/on/demandware.static/-/Library-Sites-RefArchSharedLibrary/default/dwfc2d4577/images/homepage/homepage-2/small.jpg);
+    }
+}
+@media (max-width: 768px) and (min-width: 544px) {
+    .shop-the-style .hero {
+        background-image: url(https://demo-na01-nebraskafurnituremart.demandware.net/on/demandware.static/-/Library-Sites-RefArchSharedLibrary/default/dw3fcc60b3/images/homepage/homepage-2/medium.jpg);
+    }
+}
+@media (min-width: 992px) {
+    .shop-the-style .hero {
+        background-image: url(https://demo-na01-nebraskafurnituremart.demandware.net/on/demandware.static/-/Library-Sites-RefArchSharedLibrary/default/dw3f03e824/images/homepage/homepage-2/large.jpg);
+    }
+}
+</style>
+<a href="https://demo-na01-nebraskafurnituremart.demandware.net/s/RefArch/home?lang=en_US">
+<div class="hero slant-up">
+<h1 class="page-title">Shop the Style</h1>
+</div>
+</a>
+	
+
+ 
+	
+    </div>
+    <div class="home-email-signup">
+        <div class="container">
+            <form role="form">
+                <div class="row">
+                    <div class="col-sm-5">
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="hpEmailSignUp" placeholder="Email" aria-label="Email">
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-primary subscribe-email" data-href="/on/demandware.store/Sites-RefArch-Site/en_US/EmailSubscribe-Subscribe">Subscribe </button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-sm-7 email-description">Sign up for email to receive 15% off your first order.</div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+<!-- dwMarker="linclude" dwTemplateTitle="/default//components/footer/pageFooter.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default//components/footer/pageFooter.isml" -->
+<footer id="footercontent">
+    <div class="container">
+        <div class="footer-container row">
+            <div class="footer-item col-sm-3 store">
+                <!-- dwMarker="linclude" dwTemplateTitle="/default//components/content/contentAsset.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default//components/content/contentAsset.isml" -->
+
+	
+	<!-- dwMarker="dw-object-rinclude" data="{&quot;TemplateURL&quot;:&quot;http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/components/content/contentAssetInc.isml&quot;,&quot;IsController&quot;:true,&quot;PipelineURL&quot;:&quot;http://localhost:60606/target=/app_storefront_base/cartridge/controllers/Page.js&amp;start=Include&quot;,&quot;PageProcessingTime&quot;:4,&quot;PageCacheExpires&quot;:&quot;08/09/2019 6:04 pm&quot;,&quot;TemplateTitle&quot;:&quot;/default/components/content/contentAssetInc.isml (app_storefront_base)&quot;,&quot;PipelineTitle&quot;:&quot;Page-Include (app_storefront_base)&quot;}" --><!-- dwMarker="rinclude" dwPipelineTitle="Page-Include (app_storefront_base)" dwPipelineURL="http://localhost:60606/target=/app_storefront_base/cartridge/controllers/Page.js&amp;start=Include" dwIsController="true" dwTemplateTitle="/default/components/content/contentAssetInc.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/components/content/contentAssetInc.isml" --><div class="content-asset"><!-- dwMarker="content" dwContentID="f97cff492eda421a07030f8288" -->
+		<a href="https://demo-na01-nebraskafurnituremart.demandware.net/s/RefArch/stores?showMap=true&amp;horizontalView=true&amp;lang=en_US&amp;isForm=true" class="menu-footer locate-store"><h2>Locate Store</h2></a>
+                <span class="content">The Store Locator is designed to help you find the closest store near you.</span>
+	</div> <!-- End content-asset -->
+
+
+
+            </div>
+            <div class="footer-item col-sm-3 collapsible-xs">
+                <!-- dwMarker="linclude" dwTemplateTitle="/default//components/content/contentAsset.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default//components/content/contentAsset.isml" -->
+
+	
+	<!-- dwMarker="dw-object-rinclude" data="{&quot;TemplateURL&quot;:&quot;http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/components/content/contentAssetInc.isml&quot;,&quot;IsController&quot;:true,&quot;PipelineURL&quot;:&quot;http://localhost:60606/target=/app_storefront_base/cartridge/controllers/Page.js&amp;start=Include&quot;,&quot;PageProcessingTime&quot;:4,&quot;PageCacheExpires&quot;:&quot;08/09/2019 6:04 pm&quot;,&quot;TemplateTitle&quot;:&quot;/default/components/content/contentAssetInc.isml (app_storefront_base)&quot;,&quot;PipelineTitle&quot;:&quot;Page-Include (app_storefront_base)&quot;}" --><!-- dwMarker="rinclude" dwPipelineTitle="Page-Include (app_storefront_base)" dwPipelineURL="http://localhost:60606/target=/app_storefront_base/cartridge/controllers/Page.js&amp;start=Include" dwIsController="true" dwTemplateTitle="/default/components/content/contentAssetInc.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/components/content/contentAssetInc.isml" --><div class="content-asset"><!-- dwMarker="content" dwContentID="e97af627234b1b5a4112af67f7" -->
+		<div><button class="title btn text-left btn-block d-sm-none" aria-expanded="false" aria-controls="collapsible-account">Account</button><h2 class="title d-none d-sm-block">Account</h2></div>
+                <ul id="collapsible-account"class="menu-footer content">
+                <li><a href="https://demo-na01-nebraskafurnituremart.demandware.net/s/RefArch/account?lang=en_US" title="Go to My Account">My Account</a></li>
+                <li><a href="https://demo-na01-nebraskafurnituremart.demandware.net/s/RefArch/orders?lang=en_US" title="Go to Check Order">Check Order</a></li>
+                <!-- <li><a href="https://demo-na01-nebraskafurnituremart.demandware.net/s/RefArch/searchwishlists?lang=en_US" title="Go to Wishlist">Find a Wishlist</a></li> -->
+                <!-- <li><a href="https://demo-na01-nebraskafurnituremart.demandware.net/on/demandware.store/Sites-RefArch-Site/en_US/GiftRegistry-Landing" title="Go to Gift Registry">Gift Registry</a></li> -->
+                </ul><!-- END: footer-account -->
+	</div> <!-- End content-asset -->
+
+
+
+            </div>
+            <div class="footer-item col-sm-3 collapsible-xs">
+                <!-- dwMarker="linclude" dwTemplateTitle="/default//components/content/contentAsset.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default//components/content/contentAsset.isml" -->
+
+	
+	<!-- dwMarker="dw-object-rinclude" data="{&quot;TemplateURL&quot;:&quot;http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/components/content/contentAssetInc.isml&quot;,&quot;IsController&quot;:true,&quot;PipelineURL&quot;:&quot;http://localhost:60606/target=/app_storefront_base/cartridge/controllers/Page.js&amp;start=Include&quot;,&quot;PageProcessingTime&quot;:3,&quot;PageCacheExpires&quot;:&quot;08/09/2019 6:04 pm&quot;,&quot;TemplateTitle&quot;:&quot;/default/components/content/contentAssetInc.isml (app_storefront_base)&quot;,&quot;PipelineTitle&quot;:&quot;Page-Include (app_storefront_base)&quot;}" --><!-- dwMarker="rinclude" dwPipelineTitle="Page-Include (app_storefront_base)" dwPipelineURL="http://localhost:60606/target=/app_storefront_base/cartridge/controllers/Page.js&amp;start=Include" dwIsController="true" dwTemplateTitle="/default/components/content/contentAssetInc.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/components/content/contentAssetInc.isml" --><div class="content-asset"><!-- dwMarker="content" dwContentID="7354b404e71a77cbd11b4fb2c8" -->
+		<div><button class="title btn text-left btn-block d-sm-none" aria-expanded="false" aria-controls="collapsible-customer-service">Customer Service</button><h2 class="title d-none d-sm-block">Customer Service</h2></div>
+                <ul id="collapsible-customer-service"class="menu-footer content">
+                <li><a href="#" title="Go to Contact Us">Contact Us</a></li>
+                <li><a href="#" title="Go to Gift Certificates">Gift Certificates</a></li>
+                <li><a href="#" title="Go to Help">Help</a></li>
+                <li><a href="#" title="Go to Site Map">Site Map</a></li>
+                </ul><!-- END: footer_support -->
+	</div> <!-- End content-asset -->
+
+
+
+            </div>
+            <div class="footer-item col-sm-3 collapsible-xs">
+                <!-- dwMarker="linclude" dwTemplateTitle="/default//components/content/contentAsset.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default//components/content/contentAsset.isml" -->
+
+	
+	<!-- dwMarker="dw-object-rinclude" data="{&quot;TemplateURL&quot;:&quot;http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/components/content/contentAssetInc.isml&quot;,&quot;IsController&quot;:true,&quot;PipelineURL&quot;:&quot;http://localhost:60606/target=/app_storefront_base/cartridge/controllers/Page.js&amp;start=Include&quot;,&quot;PageProcessingTime&quot;:4,&quot;PageCacheExpires&quot;:&quot;08/09/2019 6:04 pm&quot;,&quot;TemplateTitle&quot;:&quot;/default/components/content/contentAssetInc.isml (app_storefront_base)&quot;,&quot;PipelineTitle&quot;:&quot;Page-Include (app_storefront_base)&quot;}" --><!-- dwMarker="rinclude" dwPipelineTitle="Page-Include (app_storefront_base)" dwPipelineURL="http://localhost:60606/target=/app_storefront_base/cartridge/controllers/Page.js&amp;start=Include" dwIsController="true" dwTemplateTitle="/default/components/content/contentAssetInc.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/components/content/contentAssetInc.isml" --><div class="content-asset"><!-- dwMarker="content" dwContentID="cc7f2b16dc3f660ea8de518d9e" -->
+		<div><button class="title btn text-left btn-block d-sm-none" aria-expanded="false" aria-controls="collapsible-about">About</button><h2 class="title d-none d-sm-block">About</h2></div>
+                <ul id="collapsible-about"class="menu-footer content">
+                <li><a href="https://demo-na01-nebraskafurnituremart.demandware.net/s/RefArch/about%20salesforce/about-us.html?lang=en_US" title="Go to About Us">About Us</a></li>
+                <li><a href="https://demo-na01-nebraskafurnituremart.demandware.net/s/RefArch/customer%20service/privacy%20%26%20security/privacy-policy.html?lang=en_US" title="Go to Privacy">Privacy</a></li>
+                <li><a href="https://demo-na01-nebraskafurnituremart.demandware.net/s/RefArch/customer%20service/terms%20%26%20conditions/terms.html?lang=en_US" title="Go to Terms">Terms</a></li>
+                <li><a href="https://demo-na01-nebraskafurnituremart.demandware.net/s/RefArch/about%20salesforce/join%20us/jobs-landing.html?lang=en_US" title="Go to Jobs">Jobs</a></li>
+                </ul><!-- END: footer_about -->
+	</div> <!-- End content-asset -->
+
+
+
+            </div>
+        </div>
+        <hr class="hidden-xs-down" />
+        <div class="row">
+            <div class="col-lg-4 col-sm-5 push-sm-7 push-lg-8 social">
+                <!-- dwMarker="slot" dwContentID="footer-column-m" dwContext="global"-->
+	 
+
+
+	
+	
+		<!-- dwMarker="dw-object-rinclude" data="{&quot;TemplateURL&quot;:&quot;http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/slots/content/contentAssetBody.isml&quot;,&quot;IsController&quot;:false,&quot;PageProcessingTime&quot;:13,&quot;TemplateTitle&quot;:&quot;/default/slots/content/contentAssetBody.isml (app_storefront_base)&quot;,&quot;PipelineTitle&quot;:&quot;Internal&quot;}" --><!-- dwMarker="rinclude" dwPipelineTitle="Internal" dwIsController="false" dwTemplateTitle="/default/slots/content/contentAssetBody.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/slots/content/contentAssetBody.isml" --><ul class="social-links">
+                <li><a class="fa fa-linkedin-square fa-3x" aria-label="LinkedIn" href="https://www.linkedin.com/company/demandware" target="_blank"></a></li>
+                <li><a class="fa fa-facebook-square fa-3x" aria-label="Facebook" href="https://www.facebook.com/demandware" target="_blank"></a></li>
+                <li><a class="fa fa-twitter-square fa-3x" aria-label="Twitter" href="https://twitter.com/demandware" target="_blank"></a></li>
+                <li><a class="fa fa-youtube-square fa-3x" aria-label="YouTube" href="https://www.youtube.com/user/demandware" target="_blank"></a></li>
+                </ul>
+	
+
+ 
+	
+                <button class="back-to-top" title="Back to top" aria-label="Back to top">
+                    <span class="fa-stack fa-lg" aria-hidden="true">
+                        <i class="fa fa-circle fa-inverse fa-stack-2x"></i>
+                        <i class="fa fa-arrow-up fa-stack-1x"></i>
+                    </span>
+                </button>
+            </div>
+            <div class="col-lg-8 col-sm-7 pull-sm-5 pull-lg-4 copyright-notice">
+                <!-- dwMarker="linclude" dwTemplateTitle="/default//components/content/contentAsset.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default//components/content/contentAsset.isml" -->
+
+	
+	<!-- dwMarker="dw-object-rinclude" data="{&quot;TemplateURL&quot;:&quot;http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/components/content/contentAssetInc.isml&quot;,&quot;IsController&quot;:true,&quot;PipelineURL&quot;:&quot;http://localhost:60606/target=/app_storefront_base/cartridge/controllers/Page.js&amp;start=Include&quot;,&quot;PageProcessingTime&quot;:4,&quot;PageCacheExpires&quot;:&quot;08/09/2019 6:04 pm&quot;,&quot;TemplateTitle&quot;:&quot;/default/components/content/contentAssetInc.isml (app_storefront_base)&quot;,&quot;PipelineTitle&quot;:&quot;Page-Include (app_storefront_base)&quot;}" --><!-- dwMarker="rinclude" dwPipelineTitle="Page-Include (app_storefront_base)" dwPipelineURL="http://localhost:60606/target=/app_storefront_base/cartridge/controllers/Page.js&amp;start=Include" dwIsController="true" dwTemplateTitle="/default/components/content/contentAssetInc.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/components/content/contentAssetInc.isml" --><div class="content-asset"><!-- dwMarker="content" dwContentID="5413a5f81d148ef212fb1de684" -->
+		<div class="copyright">&copy; 2004-2019 Salesforce. All Rights Reserved.</div>
+                <div class="postscript">This is a demo store only. Orders made will NOT be processed.</div>
+		<!-- SFRA 3.3.0 -->
+	</div> <!-- End content-asset -->
+
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+</div>
+<div class="error-messaging"></div>
+<div class="modal-background"></div>
+<!-- dwMarker="linclude" dwTemplateTitle="/default//components/content/contentAsset.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default//components/content/contentAsset.isml" -->
+
+
+
+<!--[if lt IE 10]>
+<script>//common/scripts.isml</script>
+<script defer type="text/javascript" src="/on/demandware.static/Sites-RefArch-Site/-/en_US/v1559779090244/js/main.js"></script>
+
+    <script defer type="text/javascript" src="/on/demandware.static/Sites-RefArch-Site/-/en_US/v1559779090244/js/productTile.js"></script>
+
+
+<![endif]-->
+
+
+<!-- dwMarker="dw-object-rinclude" data="{&quot;TemplateURL&quot;:&quot;http://localhost:60606/target=/app_storefront_base/cartridge/templates/default//common/consent.isml&quot;,&quot;IsController&quot;:true,&quot;PipelineURL&quot;:&quot;http://localhost:60606/target=/app_storefront_base/cartridge/controllers/ConsentTracking.js&amp;start=Check&quot;,&quot;PageProcessingTime&quot;:3,&quot;TemplateTitle&quot;:&quot;/default//common/consent.isml (app_storefront_base)&quot;,&quot;PipelineTitle&quot;:&quot;ConsentTracking-Check (app_storefront_base)&quot;}" --><!-- dwMarker="rinclude" dwPipelineTitle="ConsentTracking-Check (app_storefront_base)" dwPipelineURL="http://localhost:60606/target=/app_storefront_base/cartridge/controllers/ConsentTracking.js&amp;start=Check" dwIsController="true" dwTemplateTitle="/default//common/consent.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default//common/consent.isml" --><span class="api-true consented tracking-consent" 
+    data-caOnline="true"
+    data-url="/on/demandware.store/Sites-RefArch-Site/en_US/ConsentTracking-GetContent?cid=tracking_hint"
+    data-reject="/on/demandware.store/Sites-RefArch-Site/en_US/ConsentTracking-SetSession?consent=false"
+    data-accept="/on/demandware.store/Sites-RefArch-Site/en_US/ConsentTracking-SetSession?consent=true"
+    data-acceptText="Yes"
+    data-rejectText="No"
+    data-heading="Tracking Consent"
+    ></span>
+<!-- Demandware Analytics code 1.0 (body_end-analytics-tracking-asynch.js) -->
+<script type="text/javascript">//<!--
+/* <![CDATA[ */
+function trackPage() {
+    try{
+        var trackingUrl = "https://demo-na01-nebraskafurnituremart.demandware.net/on/demandware.store/Sites-RefArch-Site/en_US/__Analytics-Start";
+        var dwAnalytics = dw.__dwAnalytics.getTracker(trackingUrl);
+        if (typeof dw.ac == "undefined") {
+            dwAnalytics.trackPageView();
+        } else {
+            dw.ac.setDWAnalytics(dwAnalytics);
+        }
+    }catch(err) {};
+}
+/* ]]> */
+// -->
+</script>
+<script type="text/javascript" src="/on/demandware.static/Sites-RefArch-Site/-/en_US/v1559779090244/internal/jscript/dwanalytics-18.3.js" async="async" onload="trackPage()"></script>
+<!-- Demandware Active Data (body_end-active_data.js) -->
+<script src="/on/demandware.static/Sites-RefArch-Site/-/en_US/v1559779090244/internal/jscript/dwac-18.10.4.js" type="text/javascript" async="async"></script><!-- CQuotient Activity Tracking (body_end-cquotient.js) -->
+<script src="https://cdn.cquotient.com/js/v2/gretel.min.js" type="text/javascript" async="async"></script>
+</body>
+</html>
+
+<!-- dwMarker="dw-object-page" data="{&quot;TemplateURL&quot;:&quot;http://localhost:60606/target=/app_storefront_base/cartridge/templates/default//home/homePage.isml&quot;,&quot;IsController&quot;:true,&quot;PipelineURL&quot;:&quot;http://localhost:60606/target=/app_storefront_base/cartridge/controllers/Home.js&amp;start=Show&quot;,&quot;PageProcessingTime&quot;:10,&quot;PageCacheExpires&quot;:&quot;08/09/2019 6:04 pm&quot;,&quot;TemplateTitle&quot;:&quot;/default//home/homePage.isml (app_storefront_base)&quot;,&quot;PipelineTitle&quot;:&quot;Home-Show (app_storefront_base)&quot;}" --><!-- dwMarker="page" dwPipelineTitle="Home-Show (app_storefront_base)" dwPipelineURL="http://localhost:60606/target=/app_storefront_base/cartridge/controllers/Home.js&amp;start=Show" dwIsController="true" dwTemplateTitle="/default//home/homePage.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default//home/homePage.isml" -->
